@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Event Management System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-indigo-700 text-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <svg aria-hidden="true" focusable="false" class="w-8 h-8 text-indigo-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-2xl font-bold tracking-tight">CampusEventHub</span>
+            </div>
+            <nav class="mt-4 md:mt-0" aria-label="Main Navigation">
+                <ul class="flex space-x-6 font-medium">
+                    <li><a href="#catalog" class="hover:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">Event Catalog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow space-y-12 w-full">
+
+        <!-- Event Catalog Section -->
+        <section id="catalog" aria-labelledby="catalog-heading" class="space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <h2 id="catalog-heading" class="text-3xl font-extrabold text-indigo-900">Upcoming Campus Events</h2>
+                <p class="text-slate-600 mt-1">Explore and discover upcoming academic and social events happening on campus.</p>
+            </div>
+
+            <!-- Grid of Articles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Event Article 1 -->
+                <article class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Students engaged in a modern technology seminar inside a bright university hall" class="w-full h-48 object-cover">
+                        <div class="p-5 space-y-2">
+                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Technology</span>
+                            <h3 class="text-xl font-bold text-slate-900">Annual Tech Innovation Summit</h3>
+                            <p class="text-sm text-slate-600 font-medium">📅 October 15, 2026 | 9:00 AM</p>
+                            <p class="text-sm text-slate-600 font-medium">📍 University Auditorium</p>
+                            <p class="text-slate-700 text-sm mt-2">Join industry pioneers and student developers for a deep dive into AI, web engineering, and modern IT solution development.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openModal('Annual Tech Innovation Summit')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer" aria-label="Register for Annual Tech Innovation Summit">Register Now</button>
+                    </div>
+                </article>
+
+                <!-- Event Article 2 -->
+                <article class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Diverse group of student leaders collaborating around a table during an organization workshop" class="w-full h-48 object-cover">
+                        <div class="p-5 space-y-2">
+                            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded">Leadership</span>
+                            <h3 class="text-xl font-bold text-slate-900">Student Organization Fair</h3>
+                            <p class="text-sm text-slate-600 font-medium">📅 October 22, 2026 | 1:00 PM</p>
+                            <p class="text-sm text-slate-600 font-medium">📍 Student Center Quadrangle</p>
+                            <p class="text-slate-700 text-sm mt-2">Discover campus organizations, connect with student leaders, and find exciting volunteer and extracurricular opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openModal('Student Organization Fair')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer" aria-label="Register for Student Organization Fair">Register Now</button>
+                    </div>
+                </article>
+
+                <!-- Event Article 3 -->
+                <article class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Group of cheerful university graduates collaborating and studying in a campus library" class="w-full h-48 object-cover">
+                        <div class="p-5 space-y-2">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded">Career</span>
+                            <h3 class="text-xl font-bold text-slate-900">IT Career & Internship Expo</h3>
+                            <p class="text-sm text-slate-600 font-medium">📅 November 05, 2026 | 10:00 AM</p>
+                            <p class="text-sm text-slate-600 font-medium">📍 University Gymnasium</p>
+                            <p class="text-slate-700 text-sm mt-2">Meet top tech employers looking for interns and graduating IT talent for software engineering and systems roles.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openModal('IT Career & Internship Expo')" class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer" aria-label="Register for IT Career and Internship Expo">Register Now</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Registration Modal Popup -->
+    <div id="registrationModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs hidden items-center justify-center p-4 z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <section class="bg-white border border-slate-200 rounded-xl shadow-xl max-w-lg w-full p-6 sm:p-8 relative transform transition-all">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded p-1 cursor-pointer" aria-label="Close registration modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Modal Header View -->
+            <div id="modalHeader" class="mb-6 border-b border-slate-200 pb-4">
+                <h2 id="modal-title" class="text-2xl font-bold text-indigo-900">Event Registration Form</h2>
+                <p class="text-slate-600 text-sm mt-1">Registering for: <span id="modalEventName" class="font-semibold text-indigo-700"></span></p>
+            </div>
+
+            <!-- Registration Form State -->
+            <form id="registrationForm" action="#" method="POST" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" id="selectedEventInput" name="selectedEvent">
+
+                <div class="space-y-2">
+                    <label for="fullName" class="block text-sm font-semibold text-slate-800">Full Name <span class="text-red-600" aria-hidden="true">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required 
+                           aria-label="Full Name" 
+                           placeholder="e.g., Jane Doe"
+                           class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 text-slate-900 placeholder:text-slate-400">
+                </div>
+
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-semibold text-slate-800">University Email <span class="text-red-600" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required 
+                           aria-label="University Email" 
+                           placeholder="e.g., student@univ.edu.ph"
+                           class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 text-slate-900 placeholder:text-slate-400">
+                </div>
+
+                <div class="pt-2 flex space-x-3">
+                    <button type="button" onclick="closeModal()" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-medium py-2.5 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 cursor-pointer">
+                        Cancel
+                    </button>
+                    <button type="submit" 
+                            aria-label="Submit Event Registration"
+                            class="w-2/3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-4 rounded-lg shadow transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer">
+                        Confirm Registration
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Confirmation State (Hidden by default) -->
+            <div id="successView" class="hidden text-center py-6 space-y-5">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-slate-900">Registration Successful!</h3>
+                    <p class="text-slate-600 text-sm max-w-sm mx-auto">Confirmation details have been sent to your university email.</p>
+                </div>
+                <button type="button" onclick="closeModal()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 px-4 rounded-lg shadow transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer">
+                    Close Window
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-slate-400 py-8 mt-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+            <p>&copy; 2026 CampusEventHub. All rights reserved.</p>
+            <p class="text-slate-500">Designed for Applied Generative AI for IT Solution Development.</p>
+        </div>
+    </footer>
+
+    <!-- UI Script for Modal Interactions -->
+    <script>
+        function openModal(eventName) {
+            const modal = document.getElementById('registrationModal');
+            const eventNameSpan = document.getElementById('modalEventName');
+            const eventInput = document.getElementById('selectedEventInput');
+            
+            // Reset views back to form state
+            document.getElementById('registrationForm').reset();
+            document.getElementById('registrationForm').classList.remove('hidden');
+            document.getElementById('modalHeader').classList.remove('hidden');
+            document.getElementById('successView').classList.add('hidden');
+            
+            eventNameSpan.textContent = eventName;
+            eventInput.value = eventName;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('registrationModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Hide header and form, then display the inline success view inside the modal
+            document.getElementById('modalHeader').classList.add('hidden');
+            document.getElementById('registrationForm').classList.add('hidden');
+            document.getElementById('successView').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
