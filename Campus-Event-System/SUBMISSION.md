@@ -1,3 +1,4 @@
+**GitHub Repository URL:** [https://github.com/UanAguilar/Campus-Event-System](https://github.com/UanAguilar/Campus-Event-System)    
 ## Task 1: Requirements Analysis & Prompt Architecture
 
 
